@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Congratulations!</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn-addict.site/addict-new/css/app.css">
+</head>
+<body>
+    <div class="main-wrapper thankyou" style="overflow-y:hidden">
+        <nav class="navigation mobile">
+            <img src="assets/img/close.png" alt="close" class="menu-close-img">
+            <ul class="navigation__list mobile flex column">
+                <li class="navigation__list-item mobile" onclick="scrollToTop(),menuClosing()">
+                    <img src="assets/img/logo.svg" alt="logo" class="logo-img"> 
+                </li>
+                <li class="navigation__list-item mobile" onclick="menuClosing()">
+                    <a href="index.php">Home page</a> 
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="container flex justify-between">
+                <img src="assets/img/logo.svg" alt="logo" class="logo-img">
+                <nav class="navigation">
+                    <ul class="navigation__list flex">
+                        <li class="navigation__list-item" onclick="scrollToAbout()">
+                            <a href="javascript:void(0)">Home Page</a> 
+                        </li>
+                    </ul>
+                </nav>
+                <img src="assets/img/hamburger.png" alt="menu" class="menu-open-img">
+            </div>
+        </header>
+        <section class="section-thankyou flex justify-center">
+            <div class="container">
+                <h1 class="main-heading">
+                    Thank you for registering!
+                </h1>
+                <p class="section__text">
+                    Your personal assistant will contact you shortly.
+                </p>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container flex justify-between">
+                <p class="footer-copyright">
+                    © All rights reserved – Intel AI <span id="currentYear">2022</span>
+                </p>
+                <img src="assets/img/logo.svg" alt="logo" class="logo-img" onclick="scrollToTop()">
+                <div class="footer-links">
+                    <a href="javascript:void(0)" data-name="policy" class="alterlink footer-link">Privacy Policy</a>
+                    <a href="javascript:void(0)" data-name="terms" class="alterlink footer-link">Terms of Use</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn-addict.site/addict-new/js/chunk-vendors.js"></script>
+    <script src="https://cdn-addict.site/addict-new/js/app.js"></script>
+</body>
+</html>
