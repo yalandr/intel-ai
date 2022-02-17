@@ -33,7 +33,8 @@ body.blocked {
     overflow: hidden !important;
 }
 .blurred {
-    filter: blur(6px);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
 }
 a {
     text-decoration: none;
@@ -113,9 +114,6 @@ li {
 .text-blue {
     color: var(--blue);
 }
-.half-width {
-    max-width: 46rem;
-}
 
 /*ANIMATIONS*/
 .animated {
@@ -124,6 +122,15 @@ li {
 }
 .fade-in {
     opacity: 1;
+}
+@-webkit-keyframes blinking {
+    0% {
+        width: 25%;
+    } 50% {
+        width: 100%;
+    } 100% {
+        width: 25%;
+    }
 }
 @keyframes blinking {
     0% {
@@ -186,15 +193,16 @@ li {
     z-index: 3;
 }
 .hero-content__video-wrapper {
-    width: 58%;
+    width: 65%;
 }
 .main-heading {
     font-weight: 600;
-    font-size: 4rem;
-    line-height: 4.5rem;
+    font-size: 2.6rem;
+    line-height: 130%;
     color: var(--heading-color);
 }
 .video-wrapper {
+    width: 87%;
     margin: 3rem 0 0 0;
 }
 .video video {
@@ -208,6 +216,7 @@ li {
     border-radius: 50%;
     background-position: center;
 }
+
 /*==== FORM ====*/
 .hero-content__form-wrapper {
     width: 30%;
@@ -342,7 +351,7 @@ li {
 }
 .blinking-lay {
     position: absolute;
-    background-color: rgba(13,168,246,.5);
+    background-color: #00A3F690;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     top: 0;
     left: 0;
@@ -351,9 +360,12 @@ li {
     z-index: 3;
 }
 .blinking-lay.fade-in {
-    animation-name: blinking;
-    animation-duration: .8s;
-    animation-delay: 1s;
+    -webkit-animation-name: blinking;
+            animation-name: blinking;
+    -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
 }
 .section-chief-img-wrapper {
     width: 47%;
@@ -375,7 +387,7 @@ li {
     padding: 0 7.8rem;
 }
 .section-join__part.picture {
-    background: url('../img/join-img.jpg') no-repeat center / cover;
+    background: url('../img/join-img.jpg') no-repeat top / cover;
 }
 .section-join__part .section__heading {
     color: var(--white);
@@ -389,11 +401,11 @@ li {
     padding: 6rem 0;
 }
 .section-steps .section__heading {
-    width: 49%;
     font-size: 2.25rem;
     line-height: 2.75rem;
     letter-spacing: -0.03em;
     color: var(--card-heading-color);
+    text-align: center;
 }
 .section-steps .text-part .section__text {
     width: 49%;
@@ -404,7 +416,7 @@ li {
 }
 .steps-card {
     width: 23%;
-    aspect-ratio: 1 / 0.9;
+    height: 14rem;
     background-color: var(--white);
     border-radius: var(--border-radius);
     padding: 3rem 2.4rem;
@@ -413,8 +425,11 @@ li {
 .steps-card:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
-.steps-card .section__text {
-    line-height: 130%;
+.steps-card .card-heading {
+    font-size: 1.25rem;
+    line-height: 150%;
+    font-weight: 600;
+    letter-spacing: -0.03em;
 }
 .steps__arrow-img {
     max-width: 1.25rem;
@@ -520,7 +535,8 @@ li {
     text-align: center;
     background-color: rgba(0,0,0,.3);
     padding: 1rem 1rem 2rem 1rem;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 }
 .section-thankyou .main-heading {
     color: var(--white);
@@ -552,6 +568,10 @@ li {
         height: 24rem;
         padding: 0 4rem;
     }
+    .section-join__part .section__heading {
+        font-size: 2.2rem;
+        line-height: 130%;
+    }
     .steps-card {
         padding: 2rem 1.4rem;
     }
@@ -573,8 +593,7 @@ li {
         padding: 4rem 0;
     }
     .main-heading {
-        font-size: 3.2rem;
-        line-height: 3.8rem;
+        font-size: 2.2rem;
     }
     .card-heading {
         margin: 1rem 0 .5rem 0;
@@ -661,10 +680,10 @@ li {
         width: 55%;
     }
     .main-heading {
-        font-size: 2.6rem;
         line-height: 120%;
     }
     .video-wrapper {
+        width: 100%;
         margin: 2rem 0 0 0;
     }
     .hero-content__form-wrapper {
@@ -788,7 +807,7 @@ li {
         margin-bottom: 1.5rem;
     }
     .main-heading {
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-align: center;
     }
     .video-wrapper {
@@ -806,7 +825,7 @@ li {
     }
     .about-card {
         width: 100%;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem auto;
     }
     .section-chief__content .section__heading {
         margin-bottom: 1.4rem;
@@ -826,11 +845,11 @@ li {
     }
     .section-join__part {
         width: 100%;
-        height: 10rem;
+        height: 12rem;
         padding: 1rem 2rem;
     }
     .section-join__part .section__heading {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .section-join__part .btn {
         margin: 0 auto;
@@ -838,10 +857,19 @@ li {
     .section-steps .section__heading {
         font-size: 1.6rem;
     }
+    .steps-cards-wrapper {
+        margin-top: 2rem;
+    }
     .steps-card {
         width: 80%;
+        height: 12rem;
         margin: 0.5rem 0;
         padding: 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .steps__arrow-img {
         transform: rotateZ(90deg);
