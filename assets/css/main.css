@@ -266,6 +266,7 @@ li {
     height: auto;
 }
 .form .input-wrap button {
+    width: 100%;
     height: 3.375rem;
     background-color: var(--blue);
     border-radius: 27px;
