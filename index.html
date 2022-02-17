@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IntelAI</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/splide.min.css">
-    <link rel="stylesheet" href="https://cdn-addict.site/addict-new/css/app.css">
 </head>
 <body>
     <div class="main-wrapper">
@@ -18,19 +24,16 @@
                     <img src="assets/img/logo.svg" alt="logo" class="logo-img"> 
                 </li>
                 <li class="navigation__list-item mobile" onclick="scrollToAbout(),menuClosing()">
-                    <a href="javascript:void(0)">About Us</a> 
+                    <a href="javascript:void(0)">Why Intel AI?</a> 
                 </li>
-                <li class="navigation__list-item mobile" onclick="scrollToBenefits(),menuClosing()">
-                    <a href="javascript:void(0)">Careers</a> 
-                </li>
-                <li class="navigation__list-item mobile" onclick="scrollToOffers(),menuClosing()">
-                    <a href="javascript:void(0)">Services</a> 
+                <li class="navigation__list-item mobile" onclick="scrollToChief(),menuClosing()">
+                    <a href="javascript:void(0)">Patrick Paul Gelsinger</a> 
                 </li>
                 <li class="navigation__list-item mobile" onclick="scrollToSteps(),menuClosing()">
-                    <a href="javascript:void(0)">Blog</a> 
+                    <a href="javascript:void(0)">How it works?</a> 
                 </li>
-                <li class="navigation__list-item mobile" onclick="scrollToSteps(),menuClosing()">
-                    <a href="javascript:void(0)">Contact us</a> 
+                <li class="navigation__list-item mobile" onclick="scrollToReviews(),menuClosing()">
+                    <a href="javascript:void(0)">Reviews</a> 
                 </li>
             </ul>
         </nav>
@@ -40,19 +43,16 @@
                 <nav class="navigation">
                     <ul class="navigation__list flex">
                         <li class="navigation__list-item" onclick="scrollToAbout()">
-                            <a href="javascript:void(0)">About Us</a> 
+                            <a href="javascript:void(0)">Why Intel AI?</a> 
                         </li>
-                        <li class="navigation__list-item" onclick="scrollToBenefits()">
-                            <a href="javascript:void(0)">Careers</a> 
-                        </li>
-                        <li class="navigation__list-item" onclick="scrollToOffers()">
-                            <a href="javascript:void(0)">Services</a> 
+                        <li class="navigation__list-item" onclick="scrollToChief()">
+                            <a href="javascript:void(0)">Patrick Paul Gelsinger</a> 
                         </li>
                         <li class="navigation__list-item" onclick="scrollToSteps()">
-                            <a href="javascript:void(0)">Blog</a> 
+                            <a href="javascript:void(0)">How it works?</a> 
                         </li>
-                        <li class="navigation__list-item mobile" onclick="scrollToSteps()">
-                            <a href="javascript:void(0)">Contact us</a> 
+                        <li class="navigation__list-item" onclick="scrollToReviews()">
+                            <a href="javascript:void(0)">Reviews</a> 
                         </li>
                     </ul>
                 </nav>
@@ -64,10 +64,10 @@
                 <div class="hero-content flex justify-between align-start">
                     <div class="hero-content__video-wrapper">
                         <h1 class="main-heading">
-                            Lorem ipsum dolor sit amet bro
+                            Double your profits fast with the new revolutionary technology by Intel 
                         </h1>
                         <div class="video-wrapper video">
-                            <video src="assets/video/en-1.mp4" width="100%" controls controlsList="nodownload" poster="assets/video/poster.jpg"></video>
+                            <video src="assets/video/intel-ai.mp4" width="100%" controls controlsList="nodownload" poster="assets/video/poster.jpg"></video>
                             <div class="play-btn"></div>
                         </div>
                     </div>
@@ -76,44 +76,65 @@
                             Register now <br>
                             <span class="text-blue">Only <span id="randomInteger"></span> places left</span> 
                         </h3>
-                        <div class="app" id="app1" data-type="2" data-geo="EU" data-url="thankyou.php" data-butt="Get Access Now"></div>
+                        <form action="thankyou.html" class="form" onsubmit="event.preventDefault(); formSubmission()">
+                            <div class="input-wrap">
+                                <input type="text" class="form-input name" placeholder="Your Name">
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" class="form-input lastname" placeholder="Your Lastname">
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" class="form-input email" placeholder="Your Email">
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" class="form-input phone" placeholder="Your Phone">
+                            </div>
+                            <div class="required-fields">
+                                Please fill in all the fields
+                            </div>
+                            <div class="input-wrap">
+                                <button class="btn alert-btn">Get Access Now</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section-about">
             <div class="container">
-                <h2 class="section__heading animated half-width">
-                    Sho mi robimo? Zachem I navisho?
+                <h2 class="section__heading animated">
+                    Why Intel AI is so effective for stock traders?
                 </h2>
-                <p class="section__text animated half-width">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.
+                <p class="section__text animated">
+                    Whether you`re a seasoned or only-just-begun stock trader, your goal is always clear - make successful deals and earn a fortune. But how many times have you failed and been left with nothing?
+                    <br><br>
+                    Forget about those harsh times! Get a 91% success rate of your trades just in a couple of days with Intel AI!
                 </p>
-                <div class="about-cards-wrapper flex justify-between">
+                <div class="about-cards-wrapper flex justify-between align-start">
                     <div class="about-card animated">
                         <img src="assets/img/about-01.jpg" alt="about" class="about-card-img">
                         <div class="about-card__content">
-                            <h4 class="card-heading">Business strategy</h4>
+                            <h4 class="card-heading">Research time reduction</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, 
+                                With the help of an ultra-modern powerful processor, Intel AI software computes and analyzes about 70 000 crucial trading aspects per seconds 
                             </p>
                         </div>
                     </div>
                     <div class="about-card animated">
                         <img src="assets/img/about-02.jpg" alt="about" class="about-card-img">
                         <div class="about-card__content">
-                            <h4 class="card-heading">Digitalization</h4>
+                            <h4 class="card-heading">Pattern and forecasting detection</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, 
+                                The app can go through historical data to detect any recurring patterns in the stock market. It can also acquire information from social media, news headlines, blog posts and understand the movement of stock prices. 
                             </p>
                         </div>
                     </div>
                     <div class="about-card animated">
                         <img src="assets/img/about-03.jpg" alt="about" class="about-card-img">
                         <div class="about-card__content">
-                            <h4 class="card-heading">Risk assessment</h4>
+                            <h4 class="card-heading">Ease of automation</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, 
+                                There is no need to constantly supervise your regular trades, as Intel AI can perform routine and automated tasks like buying and selling stocks 
                             </p>
                         </div>
                     </div>
@@ -124,12 +145,12 @@
             <div class="container flex justify-between">
                 <div class="section-chief__content">
                     <h2 class="section__heading animated">
-                        Lorem ipsum dolor sit amet ich my name is london city
+                        Go BIG with Intel: trade smart, earn fast 
                     </h2>
                     <p class="section__text animated">
-                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.
+                        “Intel has always been on the forefront of innovative solutions and advanced technologies evolution. But this time, we went beyond the boundaries. We created a unique AI technology that changes the trading industry forever. 
                         <br><br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.”
+                        We are enabling AI technology to bring simpler, faster ways for traders to gain financial freedom just in a few clicks without any weighty contribution. With its endless possibilities it allows you to make investments smartly and expect fantastic profits from day one.”
                     </p>
                     <div class="chief-signature-wrapper flex justify-between">
                         <div class="animated">
@@ -151,52 +172,35 @@
             <div class="section-join__part picture animated"></div>
             <div class="section-join__part flex column justify-center align-start">
                 <h2 class="section__heading animated">
-                    Join to team! <br> And make yourself happy everyday
+                    Get instant access to Intel AI software and start to earn $1000 per day right away!
                 </h2>
                 <button class="btn" onclick="scrollToForm()">Get acces now</button>
             </div>
         </section>
         <section class="section-steps">
             <div class="container">
-                <div class="text-part flex justify-between align-start">
-                    <h2 class="section__heading animated">
-                        We are building software solution that solves your business challenges
-                    </h2>
-                    <p class="section__text animated">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.
-                    </p>
-                </div>
+                <h2 class="section__heading animated">
+                    How it works?
+                </h2>
                 <div class="steps-cards-wrapper flex justify-between">
                     <div class="steps-card animated">
                         <img src="assets/img/step-01.svg" alt="step" class="steps-card__img">
-                        <h4 class="card-heading">Step 1</h4>
-                        <p class="section__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
+                        <h4 class="card-heading">Register in the system</h4>
                     </div>
                     <img src="assets/img/arrow-blue.svg" alt="arrow" class="steps__arrow-img">
                     <div class="steps-card animated">
                         <img src="assets/img/step-02.svg" alt="step" class="steps-card__img">
-                        <h4 class="card-heading">Step 2</h4>
-                        <p class="section__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
+                        <h4 class="card-heading">Talk to your account manager</h4>
                     </div>
                     <img src="assets/img/arrow-blue.svg" alt="arrow" class="steps__arrow-img">
                     <div class="steps-card animated">
                         <img src="assets/img/step-03.svg" alt="step" class="steps-card__img">
-                        <h4 class="card-heading">Step 3</h4>
-                        <p class="section__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
+                        <h4 class="card-heading">Discuss an affordable amount to get started</h4>
                     </div>
                     <img src="assets/img/arrow-blue.svg" alt="arrow" class="steps__arrow-img">
                     <div class="steps-card animated">
-                        <img src="assets/img/step-03.svg" alt="step" class="steps-card__img">
-                        <h4 class="card-heading">Step 4</h4>
-                        <p class="section__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
+                        <img src="assets/img/step-04.svg" alt="step" class="steps-card__img">
+                        <h4 class="card-heading">Verify your identity</h4>
                     </div>
                 </div>
             </div>
@@ -210,72 +214,60 @@
                                 <div class="testimonial-card__header flex">
                                     <img src="assets/img/user-01.png" alt="user" class="testimonial-card__img">
                                     <div class="testimonial-card__user-data">
-                                        <h4 class="user-name">Chikelu Neo</h4>
-                                        <p class="user-position text-blue">CEO at MazeAI</p>
+                                        <h4 class="user-name">John Dallan</h4>
+                                        <p class="user-position text-blue">IntelAI Client</p>
                                     </div>
                                 </div>
                                 <p class="testimonial-card__text">
-                                    Maecenas efficitur scelerisque lorem, et varius lacus tincidunt vel. Pellentesque a arcu vitae diam dapibus mattis vel vel orci. Vivamus eleifend nec felis vel auctor.
+                                    “I am a clued-up trader. Dozens of trading software passed through my hands, but no luck until I tried to trade with the Intel AI app. And it was an excellent experience! It's powerful, fast, and smart, helping me make the right decisions on deals and earn good money every day.”
                                 </p>
                             </li>
                             <li class="splide__slide testimonial-card">
                                 <div class="testimonial-card__header flex">
                                     <img src="assets/img/user-02.png" alt="user" class="testimonial-card__img">
                                     <div class="testimonial-card__user-data">
-                                        <h4 class="user-name">Chikelu Neo</h4>
-                                        <p class="user-position text-blue">CEO at MazeAI</p>
+                                        <h4 class="user-name">Mike Downtown</h4>
+                                        <p class="user-position text-blue">IntelAI Client</p>
                                     </div>
                                 </div>
                                 <p class="testimonial-card__text">
-                                    Maecenas efficitur scelerisque lorem, et varius lacus tincidunt vel. Pellentesque a arcu vitae diam dapibus mattis vel vel orci. Vivamus eleifend nec felis vel auctor.
+                                    “Trading stocks with the Intel AI app is just unbelievable. I earn $1000 every day! Yes, you didn`t mishear - $1000 per day! I haven't even dreamt about this. It's worth trying for sure.”
                                 </p>
                             </li>
                             <li class="splide__slide testimonial-card">
                                 <div class="testimonial-card__header flex">
                                     <img src="assets/img/user-03.png" alt="user" class="testimonial-card__img">
                                     <div class="testimonial-card__user-data">
-                                        <h4 class="user-name">Chikelu Neo</h4>
-                                        <p class="user-position text-blue">CEO at MazeAI</p>
+                                        <h4 class="user-name">Kate Clemens</h4>
+                                        <p class="user-position text-blue">IntelAI Client</p>
                                     </div>
                                 </div>
                                 <p class="testimonial-card__text">
-                                    Maecenas efficitur scelerisque lorem, et varius lacus tincidunt vel. Pellentesque a arcu vitae diam dapibus mattis vel vel orci. Vivamus eleifend nec felis vel auctor.
+                                    “Very often, my bad mood or health issues result in my poor trading performance. But this is not an issue for me anymore since I trade with a fantastic AI app from Intel! No room for emotions - just pure logic and algorithms that make my trading a real financial success!”
                                 </p>
                             </li>
                             <li class="splide__slide testimonial-card">
                                 <div class="testimonial-card__header flex">
-                                    <img src="assets/img/user-01.png" alt="user" class="testimonial-card__img">
+                                    <img src="assets/img/user-04.jpg" alt="user" class="testimonial-card__img">
                                     <div class="testimonial-card__user-data">
-                                        <h4 class="user-name">Chikelu Neo</h4>
-                                        <p class="user-position text-blue">CEO at MazeAI</p>
+                                        <h4 class="user-name">Robert Lieberman</h4>
+                                        <p class="user-position text-blue">IntelAI Client</p>
                                     </div>
                                 </div>
                                 <p class="testimonial-card__text">
-                                    Maecenas efficitur scelerisque lorem, et varius lacus tincidunt vel. Pellentesque a arcu vitae diam dapibus mattis vel vel orci. Vivamus eleifend nec felis vel auctor.
+                                “I am facing thousands of stocks to pick every day, and it's a very daunting task. With Intel AI app help, I can scan thousands of stocks very fast and in real time, make the right decisions, and earn extra money daily!”
                                 </p>
                             </li>
                             <li class="splide__slide testimonial-card">
                                 <div class="testimonial-card__header flex">
-                                    <img src="assets/img/user-02.png" alt="user" class="testimonial-card__img">
+                                    <img src="assets/img/user-05.jpg" alt="user" class="testimonial-card__img">
                                     <div class="testimonial-card__user-data">
-                                        <h4 class="user-name">Chikelu Neo</h4>
-                                        <p class="user-position text-blue">CEO at MazeAI</p>
+                                        <h4 class="user-name">Dave Fisher</h4>
+                                        <p class="user-position text-blue">IntelAI Client</p>
                                     </div>
                                 </div>
                                 <p class="testimonial-card__text">
-                                    Maecenas efficitur scelerisque lorem, et varius lacus tincidunt vel. Pellentesque a arcu vitae diam dapibus mattis vel vel orci. Vivamus eleifend nec felis vel auctor.
-                                </p>
-                            </li>
-                            <li class="splide__slide testimonial-card">
-                                <div class="testimonial-card__header flex">
-                                    <img src="assets/img/user-03.png" alt="user" class="testimonial-card__img">
-                                    <div class="testimonial-card__user-data">
-                                        <h4 class="user-name">Chikelu Neo</h4>
-                                        <p class="user-position text-blue">CEO at MazeAI</p>
-                                    </div>
-                                </div>
-                                <p class="testimonial-card__text">
-                                    Maecenas efficitur scelerisque lorem, et varius lacus tincidunt vel. Pellentesque a arcu vitae diam dapibus mattis vel vel orci. Vivamus eleifend nec felis vel auctor.
+                                “My friend recommended me an Intel AI software saying that it's the coolest app from any other existing ones at the moment. Right, how many times have I heard this? Many! But I decided to try, and I was completely in shock! It helps me to earn so fast that I managed to buy an expensive car in a very short time.”
                                 </p>
                             </li>
                         </ul>
