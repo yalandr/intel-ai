@@ -16,6 +16,7 @@
     --card-text-color: #5B5B5B;
     --steps-bg-color: #EDF7FF;
     --footer-bg-color: #063255;
+    --alert-color: rgb(231, 80, 54);
     --border-radius: 20px;
     --font-primary: 'Poppins', sans-serif;
 }
@@ -244,23 +245,24 @@ li {
 .form .input-wrap input.valid {
     border: 1px solid rgb(74, 214, 74);
 }
-.form .input-wrap .vue-tel-input {
-    border-radius: 27px;
-    border: 1px solid rgba(210, 218, 237, 0.17);
+.required-fields {
+    border-radius: 6px;
+    border: 2px solid var(--alert-color);
+    color: var(--alert-color);
+    background-color: #ebc2ab;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    transform: scale(0);
+    height: 0;
+    transition: .3s;
 }
-.form .input-wrap .vti__dropdown {
-    border-radius: 27px 0 0 27px;
-}
-.form .checkbox-wrap input {
-    width: 14px;
-    height: 14px;
-    margin: 0 14px;
-}
-.form .checkbox-wrap label {
-    font-family: var(--font-primary);
-    font-size: 12px;
-    line-height: 18px;
-    color: #9C9C9C;
+.required-fields.visible {
+    padding: 1rem;
+    margin: 8px 0;
+    transform: scale(1);
+    height: auto;
 }
 .form .input-wrap button {
     height: 3.375rem;
