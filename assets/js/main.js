@@ -8,8 +8,14 @@ const scrollToTop = () => {
 const scrollToAbout = () => {
     document.querySelector('.section-about').scrollIntoView({behavior:"smooth"})
 }
+const scrollToChief = () => {
+    document.querySelector('.section-chief').scrollIntoView({behavior:"smooth"})
+}
 const scrollToSteps = () => {
     document.querySelector('.section-steps').scrollIntoView({behavior:"smooth"})
+}
+const scrollToReviews = () => {
+    document.querySelector('.section-testimonials').scrollIntoView({behavior:"smooth"})
 }
 
 // MOBILE MENU
