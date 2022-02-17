@@ -85,5 +85,29 @@ if (document.body.clientWidth < 680) {
 }
 splide.mount();
 
+// Form Submission
+let nameValue = document.querySelector('.name');
+let lastnameValue = document.querySelector('.lastname');
+let emailValue = document.querySelector('.email');
+let phoneValue = document.querySelector('.phone');
+let requiredFields = document.querySelector('.required-fields');
+
+const formSubmission = () => {
+    if (nameValue.value != '' && lastnameValue.value != '' && emailValue.value != '' && phoneValue.value != '') {
+        window.location.href = 'thankyou.html';
+    } else {
+        requiredFields.classList.add('visible');
+    }
+}
+
+const inputFields = document.querySelectorAll('.name, .lastname, .email, .phone');
+for (let inputItem of inputFields) {
+    inputItem.addEventListener('focus', function() {
+        if (requiredFields.classList.contains('visible')) {
+            requiredFields.classList.remove('visible');
+        }
+    });
+}
+
 
 
