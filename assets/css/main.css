@@ -236,6 +236,10 @@ li {
     background-color: var(--white);
     border-radius: var(--border-radius);
 }
+.form-disclaimer {
+    font-size: 12px;
+    line-height: 1.4;
+}
 .form .input-wrap {
     margin: 1.25rem 0;
 }
